@@ -11,53 +11,55 @@
 ## Tutorial
 
 ```bash
-$ export GITHUB_USERNAME=<имя_пользователя>
-$ export GIST_TOKEN=<сохраненный_токен>
-$ alias edit=<nano|vi|vim|subl>
+$ export GITHUB_USERNAME=duchessacid                         # Создание переменной окружения GITHUB_USERNAME
+$ export GIST_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx    # Создание переменной окружения GIST_TOKEN
+$ alias edit=gedit                                             # Создание альтернативной версии команды "gedit"
 ```
 
 ```ShellSession
-$ mkdir -p ${GITHUB_USERNAME}/workspace
-$ cd ${GITHUB_USERNAME}/workspace
-$ pwd
-$ cd ..
-$ pwd
-```
-
+$ mkdir -p ${GITHUB_USERNAME}/workspace                       # Создание папки /duchessacid/workspace
+$ cd ${GITHUB_USERNAME}/workspace                             #  Переход в папку /duchessacid/workspace
+$ pwd                                                         # Вывод текущего каталога
+/home/acid/duchessacid/workspace
+$ cd ..                                                       # Переход по каталогу на раздел выше
+$ pwd                                                         # # Вывод текущего каталога
+/home/acid/duchessacid
 ```ShellSession
-$ mkdir -p workspace/tasks/
-$ mkdir -p workspace/projects/
-$ mkdir -p workspace/reports/
-$ cd workspace
+$ mkdir -p workspace/tasks/                                   # Создание папки workspace/tasks/
+$ mkdir -p workspace/projects/                                # Создание папки workspace/projects/
+$ mkdir -p workspace/reports/                                 # Создание папки workspace/reports/
+$ cd workspace                                                #  Переход в папку /duchessacid/workspace
 ```
 
 ```ShellSession
 # Debian
-$ wget https://nodejs.org/dist/v6.11.5/node-v6.11.5-linux-x64.tar.xz
-$ tar -xf node-v6.11.5-linux-x64.tar.xz
-$ rm -rf node-v6.11.5-linux-x64.tar.xz
-$ mv node-v6.11.5-linux-x64 node
-```
+$ wget https://nodejs.org/dist/v6.11.5/node-v6.11.5-linux-x64.tar.xz    # Скачиваем файл по указанной ссылке
+$ tar -xf node-v6.11.5-linux-x64.tar.xz                                 # Распаковываем архив
+$ rm -rf node-v6.11.5-linux-x64.tar.xz                                  # Удаление архива
+$ mv node-v6.11.5-linux-x64 node                                        # Переименовывание папки с node js 
 
 ```ShellSession
-$ ls node/bin
-$ echo ${PATH}
-$ export PATH=${PATH}:`pwd`/node/bin
-$ echo ${PATH}
-$ mkdir scripts
-$ cat > scripts/activate<<EOF
+$ ls node/bin                                         # Вывод файловой файлов в папке node/bin 
+node  npm
+$ echo ${PATH}                                        # Вывод на экран переменной PATH
+/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+$ export PATH=${PATH}:`pwd`/node/bin                  # Добавление в PATH папку с программой node js
+$ echo ${PATH}                                        # Вывод на экран переменной PATH
+/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:
+/home/acid/duchessacid/workspace/node/bin
+$ mkdir scripts                       # Создание папки /duchessacid/workspace/scripts
+$ cat > scripts/activate<<EOF         # Запись строки в файл /duchessacid/workspace/scripts/activate
 export PATH=\${PATH}:`pwd`/node/bin
 EOF
-$ source scripts/activate
-```
+$ source scripts/activate                             # Выполнение скрипта
 
 ```ShellSession
-$ npm install -g gistup
-$ ls node/bin
-```
+$ npm install -g gistup                             # Установка пакета gistup в node js
+$ ls node/bin                                       # Вывод файлов из /duchessacid/workspace/node/bin
+gistup  gistup-open  gistup-rename  node  npm
 
 ```ShellSession
-$ cat > ~/.gistup.json <<EOF
+$ cat > ~/.gistup.json <<EOF                        # Запись строки в файл ~/.gistup.json
 {
   "token": "${GIST_TOKEN}"
 }
