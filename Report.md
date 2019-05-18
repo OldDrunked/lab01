@@ -12,18 +12,18 @@
 
 ```bash
 $ export GITHUB_USERNAME=OldDrunked                        # Создание переменной окружения GITHUB_USERNAME
-$ export GIST_TOKEN=    # Создание переменной окружения GIST_TOKEN
-$ alias edit=gedit                                             # Создание альтернативной версии команды "gedit"
+$ export GIST_TOKEN=MyNewCode    # Создание переменной окружения GIST_TOKEN
+$ alias edit=vi                                           # Создание альтернативной версии команды "vi"
 ```
 
 ```ShellSession
 $ mkdir -p ${GITHUB_USERNAME}/workspace                       # Создание папки /duchessacid/workspace
 $ cd ${GITHUB_USERNAME}/workspace                             #  Переход в папку /duchessacid/workspace
 $ pwd                                                         # Вывод текущего каталога
-/home/acid/duchessacid/workspace
+/home/acid/OldDrunked/workspace
 $ cd ..                                                       # Переход по каталогу на раздел выше
 $ pwd                                                         # # Вывод текущего каталога
-/home/acid/duchessacid
+/home/acid/OldDrunked
 ```ShellSession
 $ mkdir -p workspace/tasks/                                   # Создание папки workspace/tasks/
 $ mkdir -p workspace/projects/                                # Создание папки workspace/projects/
