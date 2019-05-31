@@ -17,8 +17,8 @@ $ alias edit=vi                                           # Создание а�
 ```
 
 ```ShellSession
-$ mkdir -p ${GITHUB_USERNAME}/workspace                       # Создание папки /duchessacid/workspace
-$ cd ${GITHUB_USERNAME}/workspace                             #  Переход в папку /duchessacid/workspace
+$ mkdir -p ${GITHUB_USERNAME}/workspace                       # Создание папки /OldDrunked/workspace
+$ cd ${GITHUB_USERNAME}/workspace                             #  Переход в папку /OldDrunked/workspace
 $ pwd                                                         # Вывод текущего каталога
 /home/acid/OldDrunked/workspace
 $ cd ..                                                       # Переход по каталогу на раздел выше
@@ -28,7 +28,7 @@ $ pwd                                                         # # Вывод т�
 $ mkdir -p workspace/tasks/                                   # Создание папки workspace/tasks/
 $ mkdir -p workspace/projects/                                # Создание папки workspace/projects/
 $ mkdir -p workspace/reports/                                 # Создание папки workspace/reports/
-$ cd workspace                                                #  Переход в папку /duchessacid/workspace
+$ cd workspace                                                #  Переход в папку /OldDrunked/workspace
 ```
 
 ```ShellSession
@@ -46,16 +46,16 @@ $ echo ${PATH}                                        # Вывод на экра
 $ export PATH=${PATH}:`pwd`/node/bin                  # Добавление в PATH папку с программой node js
 $ echo ${PATH}                                        # Вывод на экран переменной PATH
 /usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:
-/home/acid/duchessacid/workspace/node/bin
-$ mkdir scripts                       # Создание папки /duchessacid/workspace/scripts
-$ cat > scripts/activate<<EOF         # Запись строки в файл /duchessacid/workspace/scripts/activate
+/home/acid/OldDrunked/workspace/node/bin
+$ mkdir scripts                       # Создание папки /OldDrunked/workspace/scripts
+$ cat > scripts/activate<<EOF         # Запись строки в файл /OldDrunked/workspace/scripts/activate
 export PATH=\${PATH}:`pwd`/node/bin
 EOF
 $ source scripts/activate                             # Выполнение скрипта
 
 ```ShellSession
 $ npm install -g gistup                             # Установка пакета gistup в node js
-$ ls node/bin                                       # Вывод файлов из /duchessacid/workspace/node/bin
+$ ls node/bin                                       # Вывод файлов из /OlsDrunked/workspace/node/bin
 gistup  gistup-open  gistup-rename  node  npm
 
 ```ShellSession
