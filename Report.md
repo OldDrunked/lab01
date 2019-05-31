@@ -20,10 +20,10 @@ $ alias edit=vi                                           # Создание а�
 $ mkdir -p ${GITHUB_USERNAME}/workspace                       # Создание папки /OldDrunked/workspace
 $ cd ${GITHUB_USERNAME}/workspace                             #  Переход в папку /OldDrunked/workspace
 $ pwd                                                         # Вывод текущего каталога
-/home/acid/OldDrunked/workspace
+/home/root/OldDrunked/workspace
 $ cd ..                                                       # Переход по каталогу на раздел выше
 $ pwd                                                         # # Вывод текущего каталога
-/home/acid/OldDrunked
+/home/root/OldDrunked
 ```ShellSession
 $ mkdir -p workspace/tasks/                                   # Создание папки workspace/tasks/
 $ mkdir -p workspace/projects/                                # Создание папки workspace/projects/
@@ -46,7 +46,7 @@ $ echo ${PATH}                                        # Вывод на экра
 $ export PATH=${PATH}:`pwd`/node/bin                  # Добавление в PATH папку с программой node js
 $ echo ${PATH}                                        # Вывод на экран переменной PATH
 /usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:
-/home/acid/OldDrunked/workspace/node/bin
+/home/root/OldDrunked/workspace/node/bin
 $ mkdir scripts                       # Создание папки /OldDrunked/workspace/scripts
 $ cat > scripts/activate<<EOF         # Запись строки в файл /OldDrunked/workspace/scripts/activate
 export PATH=\${PATH}:`pwd`/node/bin
